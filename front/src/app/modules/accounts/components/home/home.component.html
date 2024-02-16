@@ -1,0 +1,54 @@
+<div class="bg-gradient-to-br from-[#ffffff] to-[#CDABD9]">
+    <app-modal *ngIf="modal.isOpen"
+    [closeButtonLabel]="closeButtonLabel"
+    [modalTitle]="modalTitle"
+    [modalContent]="modalContent"
+    [cancelButtonLabel]="cancelButtonLabel"
+    (closeModalEvent)="closeModal()"
+    >
+    <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+
+</app-modal>
+    <app-navbar
+    [isSession]="true"
+    (logout)="onLogout()"
+    ></app-navbar>
+    <div class="container h-screen  mt-10 w-screen">
+        <div class="flex flex-row justify-center ">
+            <div class="flex flex-col h-10 w-1/2">
+                <app-banner-hello
+                [date]="date"
+                [hour]="hour"
+                welcome_message="¡Hola, {{user_data.user.first_name}}!"
+                ></app-banner-hello>
+                <div class="mt-4">
+                    <app-card-account
+                    [accounts]="user_data.accounts"
+                    ></app-card-account>
+                </div>
+                <div class="flex flex-row mt-3 gap-3">
+                    <app-card-info [title]="'Revisa tu turno de instalación'"
+                        [description]="'Consulta la fecha y hora de tu instalación'" [button_text]=" 'Ver Turno'">
+                        <ng-icon name="heroCalendar" class="text-3xl text-slate-500 mr-3 mt-1"></ng-icon>
+                    </app-card-info>
+                    <app-card-info [title]="'Visita Tienda Xtrim'"
+                        [description]="'Revisa nuestro catalogo y obten ofertas exclusivas'"
+                        [button_text]=" 'Ir Ahora' ">
+                        <ng-icon name="heroShoppingCart" class="text-3xl text-slate-500 mr-3 mt-1"></ng-icon>
+                    </app-card-info>
+                </div>
+                <div class="flex flex-row mt-2">
+                    <app-banner></app-banner>
+                </div>
+
+            </div>
+
+            <div class="flex flex-col w-auto mx-3">
+                <app-card-ads></app-card-ads>
+                <app-card-contact></app-card-contact>
+            </div>
+        </div>
+
+    </div>
+
+</div>

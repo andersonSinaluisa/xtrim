@@ -1,0 +1,38 @@
+{
+    "first_name": "Leah",
+    "last_name": "Toomey",
+    "email": "ltoomey2@adobe.com",
+    "password": "123456",
+    "accounts": [
+      {
+        "balance": "8.32",
+        "city": "Huesca",
+        "state": "Aragon",
+        "address": "0 Bunker Hill Trail"
+      },
+      {
+        "balance": "5.40",
+        "city": "Huesca",
+        "state": "Aragon",
+        "address": "35209 Texas Lane"
+      },
+      {
+        "balance": "6.69",
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "address": "74986 Forster Alley"
+      },
+      {
+        "balance": "9.04",
+        "city": "Huesca",
+        "state": "Aragon",
+        "address": "30 Judy Lane"
+      },
+      {
+        "balance": "5.67",
+        "city": "Teruel",
+        "state": "Aragon",
+        "address": "19 Susan Center"
+      }
+    ]
+  }

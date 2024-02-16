@@ -1,0 +1,23 @@
+<!-- modal.component.html -->
+
+<div class="fixed inset-0 flex items-center justify-center bg-gray-800  bg-opacity-75">
+    <div class=" p-4 rounded-lg">
+      <div class="bg-white p-8 rounded-lg">
+        <h2 class="text-2xl font-bold mb-4">{{
+          modalTitle
+          
+        }}</h2>
+        <p>{{
+          modalContent
+          
+        }}</p>
+        <ng-content></ng-content>
+
+        <button class="mt-4 mx-5 bg-slate-600 text-white px-4 py-2 rounded" (click)="onCloseModal()">
+          {{cancelButtonLabel}}
+        </button>
+        
+      </div>
+    </div>
+  </div>
+  

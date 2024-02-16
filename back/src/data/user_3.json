@@ -1,0 +1,14 @@
+{
+    "first_name": "Pippa",
+    "last_name": "Cleeton",
+    "email": "pcleeton0@reverbnation.com",
+    "password": "123456",
+    "accounts": [
+      {
+        "balance": "9.67",
+        "city": "Huesca",
+        "state": "Aragon",
+        "address": "0875 Valley Edge Avenue"
+      }
+    ]
+  }

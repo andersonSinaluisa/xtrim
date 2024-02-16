@@ -1,0 +1,47 @@
+<div class="flex flex-col w-full bg-slate-100 p-5 rounded-xl pb-16">
+
+    <div class="flex flex-row">
+        <h1 class="text-2xl mx-5 font-bold text-slate-600">Mis cuentas</h1>
+    </div>
+    <div class="flex flex-row justify-end">
+        <h2 class="text-primary-900 m-3 font-bold">
+            Todas mis cuentas
+        </h2>
+    </div>
+    <div class="grid grid-cols-2 gap-2">
+        <div class="flex flex-col w-full mx-2" *ngFor="let account of accounts">
+            <div class="flex  rounded-t-lg bg-primary-900 p-2 bg-opacity-80">
+            </div>
+            <div class=" bg-white p-5 rounded-b-lg">
+
+                <div class="flex flex-row justify-between">
+                    <div class="flex flex-row">
+                        <h1 class="text-lg font-bold mb-4 text-slate-500">Cuenta No.</h1>
+                    </div>
+                    <div class="flex flex-col">
+                        <p class="text-slate-500 font-bold ">
+                            {{
+                                account.secuencial
+                            }}
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-row">
+                    <span class="text-slate-400">
+                        {{account.state}},{{account.city}},{{account.address}}
+                    </span>
+                </div>
+                <div class="flex flex-row justify-between">
+                    <div class="flex flex-col">
+                        <h1 class="text-xl font-bold  text-primary-900 text-opacity-60">$ {{account.balance}}</h1>
+                        <p class="text-xs font-bold  text-primary-900 text-opacity-60">VALOR PENDIENTE</p>
+                    </div>
+                    <div class="flex flex-col  mt-3">
+                        <a class="text-primary-900 font-bold text-opacity-70 ">
+                            Gestionar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

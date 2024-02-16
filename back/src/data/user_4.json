@@ -1,0 +1,20 @@
+{
+    "first_name": "Idaline",
+    "last_name": "Shewery",
+    "email": "ishewery1@unblog.fr",
+    "password": "123456",
+    "accounts": [
+      {
+        "balance": "4.87",
+        "city": "Zaragoza",
+        "state": "Aragon",
+        "address": "92837 Reindahl Way"
+      },
+      {
+        "balance": "8.06",
+        "city": "Teruel",
+        "state": "Aragon",
+        "address": "01349 Graceland Pass"
+      }
+    ]
+  }

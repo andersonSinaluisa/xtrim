@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+    db:
+        image: mysql:5.7
+        environment:
+            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: xtrim_api_db
+            MYSQL_USER: api
+            MYSQL_PASSWORD: api
+
+        volumes:
+            - ./back/db:/var/lib/mysql
+
+        networks:
+            - xtrim_api_net
+    api:
+        build:
+            context: ./back/src/
+            dockerfile: Dockerfile
+            args:
+                - API_URL=http://api:8000
+        volumes:
+            - ./back/src/:/usr/src/app/
+        ports:
+            - 8000:8000
+        environment:
+            DB_URI: "mysql+pymysql://api:api@db/xtrim_api_db"
+            HOST: "0.0.0.0"
+            PORT: 8000
+            FLASK_DEBUG: 1
+
+        depends_on:
+            - db
+
+        networks:
+            - xtrim_api_net
+
+    front:
+        build:
+            context: ./front/
+            dockerfile: Dockerfile
+        volumes:
+            - ./front/:/usr/src/app/
+        ports:
+            - 4200:80
+        environment:
+            API_URL: http://api:8000
+
+        depends_on:
+            - api
+networks:
+    xtrim_api_net:
+        driver: bridge
+
+
